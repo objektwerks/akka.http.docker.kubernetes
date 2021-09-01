@@ -5,6 +5,7 @@ Akka Http Docker
 Install
 -------
 1. Docker - https://docs.docker.com/get-docker/
+2. Docker for Visual Studio by Microsoft  ( much more useful than Docker Dashboard! )
 
 Build
 -----
@@ -20,7 +21,6 @@ Curl
 
 Docker
 ------
->Use optional Docker Dashboard as required. Image name is: akka-http-docker:0.1
 1. sbt clean compile stage
 2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
 3. sbt docker:publishLocal
@@ -30,7 +30,9 @@ Docker
 7. docker exec -i -t <container-id> /bin/bash
 8. curl http://localhost:7979
 9. docker stop <container-id>
->Run optional script:
+
+Docker Script
+-------------
 1. target/universal/stage/bin/akka-http-docker
 2. curl http://localhost:7979
 
