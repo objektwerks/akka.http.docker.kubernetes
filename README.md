@@ -1,6 +1,6 @@
 Akka Http Docker
 ----------------
->Akka Http server in docker image/container.
+>Akka Http server in docker image and container.
 
 Install
 -------
