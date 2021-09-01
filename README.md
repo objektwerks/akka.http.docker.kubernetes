@@ -21,7 +21,7 @@ Curl
 Docker
 ------
 >Use optional Docker Dashboard as required. Image name is: akka-http-docker:0.1
-1. sbt clean compile
+1. sbt clean compile stage
 2. sbt docker:stage
 3. sbt docker:publishLocal
 4. docker images
