@@ -5,7 +5,7 @@ Akka Http Docker
 Install
 -------
 1. Docker - https://docs.docker.com/get-docker/
-2. Docker for Visual Studio by Microsoft  ( much more useful than Docker Dashboard! )
+2. Microsoft VSCode Docker ( a more functional alternative to Docker Dashboard! )
 
 Build
 -----
@@ -46,7 +46,10 @@ Docker Notes
 
 Docker Push
 -----------
->Use Docker Dashboard or Microsoft Docker VSCode to push akka-http-docker:0.1 to your DockerHub.
+>To push akka-http-docker:0.1 to your DockerHub use one of these options:
+1. Docker Dashboard
+2. Microsoft VSCode Docker
+3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
 
 Links
 -----
