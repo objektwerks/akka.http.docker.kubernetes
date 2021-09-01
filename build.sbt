@@ -16,3 +16,5 @@ libraryDependencies ++= {
     "ch.qos.logback" % "logback-classic" % "1.2.5"
   )
 }
+
+dockerExposedPorts ++= Seq(9000, 9001)
