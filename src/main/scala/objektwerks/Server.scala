@@ -8,7 +8,7 @@ import akka.http.scaladsl.model.StatusCodes.OK
 
 import com.typesafe.config.ConfigFactory
 
-import java.time.LocalTime
+import java.time.LocalDateTime
 
 import scala.io.StdIn
 
@@ -18,7 +18,7 @@ object Server {
     implicit val system = ActorSystem.create(conf.getString("server.name"), conf)
     implicit val executor = system.dispatcher
     
-    val route = get { complete( OK -> LocalTime.now.toString ) }
+    val route = get { complete( OK -> LocalDateTime.now.toString ) }
 
     val host = conf.getString("server.host")
     val port = conf.getInt("server.port")
