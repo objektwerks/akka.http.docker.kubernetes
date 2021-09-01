@@ -27,9 +27,9 @@ Docker
 4. docker images
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-docker:0.1
 6. docker ps
-7. docker exec -i -t <container-id> /bin/bash
-8. curl http://localhost:7979
-9. docker stop <container-id>
+7. docker exec -i -t container-id /bin/bash
+8. curl http://localhost:7979  ( works from docker bash, but not local bash/zsh )
+9. docker stop container-id
 
 Docker Script
 -------------
@@ -39,9 +39,9 @@ Docker Script
 Docker Notes
 ------------
 1. list images - docker images
-2. remove image - docker image rm <image-id> --force
+2. remove image - docker image rm image-id --force
 3. list running containers - docker ps
-4. logs - docker logs <container-id>
+4. logs - docker logs container-id
 
 Reference
 ---------
