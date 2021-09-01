@@ -22,13 +22,16 @@ Docker
 ------
 >Use optional Docker Dashboard as required. Image name is: akka-http-docker:0.1
 1. sbt clean compile stage
-2. sbt docker:stage
+2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
 3. sbt docker:publishLocal
 4. docker images
 5. docker run -d -p 7979:7979 akka-http-docker:0.1
 6. docker ps
 7. curl --request GET http://localhost:7979
 8. docker stop akka-http-docker:0.1
+>Run optional script:
+1. target/universal/stage/bin/akka-http-docker
+2. curl --request GET http://localhost:7979
 
 Docker Notes
 ------------
