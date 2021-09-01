@@ -1,6 +1,6 @@
 enablePlugins(JavaAppPackaging, DockerPlugin, KubeDeploymentPlugin)
 
-name := "akka.http.docker"
+name := "akka.http.docker.kubernetes"
 organization := "objektwerks"
 version := "0.1"
 scalaVersion := "2.13.6"
