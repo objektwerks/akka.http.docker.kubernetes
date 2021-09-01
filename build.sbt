@@ -24,7 +24,8 @@ dockerBaseImage := "openjdk:8-jre-alpine"
 import com.typesafe.sbt.packager.docker._
 dockerCommands ++= Seq(
   Cmd("USER", "root"),
-  ExecCmd("RUN", "apk", "add", "--no-cache", "bash")
+  ExecCmd("RUN", "apk", "add", "--no-cache", "bash"),
+  ExecCmd("RUN", "apk", "add", "--no-cache", "curl")
 )
 
 import com.typesafe.sbt.packager.docker.DockerChmodType
