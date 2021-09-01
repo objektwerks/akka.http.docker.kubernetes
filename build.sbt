@@ -2,7 +2,7 @@ enablePlugins(JavaAppPackaging)
 
 name := "akka.http.docker"
 organization := "objektwerks"
-version := "0.1-SNAPSHOT"
+version := "0.1"
 scalaVersion := "2.13.6"
 libraryDependencies ++= {
   val akkaVersion = "2.6.16"
@@ -17,4 +17,5 @@ libraryDependencies ++= {
   )
 }
 
-dockerExposedPorts ++= Seq(9000, 9001)
+dockerExposedPorts ++= Seq(9000)
+dockerBaseImage := "openjdk:8-jre-alpine"

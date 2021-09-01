@@ -20,9 +20,13 @@ Curl
 
 Docker
 ------
-1. sbt clean compile stage
-2. ./target/universal/stage/bin/akka-http-docker
-3. curl http://localhost:7979
+1. sbt clean compile
+2. sbt docker:stage
+3. sbt docker:publishLocal ( view akka-http-docker image via docker dashboard )
+4. docker run -p 7979:9000 akka-http-docker:0.1  ( may have to run via docker dashboard )
+5. docker ps  ( akka-http-docker:0.1 should be running )
+6. curl http://localhost:7979
+7. docker stop akka-http-docker:0.1  ( may have to run via docker dashboard )
 
 Reference
 ---------
