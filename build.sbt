@@ -17,5 +17,11 @@ libraryDependencies ++= {
   )
 }
 
-dockerExposedPorts ++= Seq(9000)
+dockerExposedPorts ++= Seq(7979)
 dockerBaseImage := "openjdk:8-jre-alpine"
+
+import com.typesafe.sbt.packager.docker._
+dockerCommands ++= Seq(
+  Cmd("USER", "root"),
+  ExecCmd("RUN", "apk", "add", "--no-cache", "bash")
+)
