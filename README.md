@@ -44,6 +44,10 @@ Docker Notes
 3. list running containers - docker ps
 4. logs - docker logs container-id
 
+Docker Push
+-----------
+>Use Docker Dashboard or Microsoft Docker VSCode to push akka-http-docker:0.1 to your DockerHub.
+
 Links
 -----
 1. https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
