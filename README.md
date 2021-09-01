@@ -20,14 +20,15 @@ Curl
 
 Docker
 ------
+>Use optional Docker Dashboard as required. Image name is: akka-http-docker:0.1
 1. sbt clean compile
 2. sbt docker:stage
-3. sbt docker:publishLocal ( view akka-http-docker image via docker dashboard )
-4. docker images  ( note akka-http-docker:0.1 )
-5. docker run -d -p 7979:7979 akka-http-docker:0.1  ( may have to run via docker dashboard )
-6. docker ps  ( akka-http-docker:0.1 should be running )
+3. sbt docker:publishLocal
+4. docker images
+5. docker run -d -p 7979:7979 akka-http-docker:0.1
+6. docker ps
 7. curl --request GET http://localhost:7979
-8. docker stop akka-http-docker:0.1  ( may have to stop via docker dashboard )
+8. docker stop akka-http-docker:0.1
 
 Docker Notes
 ------------
