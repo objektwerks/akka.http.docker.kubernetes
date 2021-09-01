@@ -27,7 +27,7 @@ Docker
 4. docker images
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-docker:0.1
 6. docker ps
-7. curl http://localhost:7979
+7. curl -v -X GET 0.0.0.0:7979
 8. docker stop <container-id>
 >Run optional script:
 1. target/universal/stage/bin/akka-http-docker
