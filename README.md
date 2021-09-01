@@ -1,6 +1,6 @@
 Akka Http Docker Kubernetes
 ---------------------------
->Akka Http server in docker image and container deployed with kubernetes.
+>Akka Http server in Docker image and container, optionally deployed with Kubernetes.
 
 Install
 -------
