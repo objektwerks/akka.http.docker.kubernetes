@@ -27,8 +27,9 @@ Docker
 4. docker images
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-docker:0.1
 6. docker ps
-7. docker exec -i -t container-id /bin/bash
-8. curl http://localhost:7979  ( works from docker bash, but not local bash/zsh )
+7. docker exec -it container-id /bin/bash
+   * curl http://localhost:7979  (via docker container )
+8. curl http://localhost:7979 ( via localhost )
 9. docker stop container-id
 
 Docker Script
