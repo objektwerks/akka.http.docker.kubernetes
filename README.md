@@ -44,6 +44,7 @@ Docker Notes
 3. list running containers - docker ps
 4. logs - docker logs container-id
 
-Reference
----------
+Links
+-----
 1. https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
+2. https://faun.pub/docker-wonderland-akka-http-server-and-postgres-db-962b971ff28a
