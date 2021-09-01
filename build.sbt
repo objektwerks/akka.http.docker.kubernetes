@@ -26,3 +26,6 @@ dockerCommands ++= Seq(
   Cmd("USER", "root"),
   ExecCmd("RUN", "apk", "add", "--no-cache", "bash")
 )
+
+import com.typesafe.sbt.packager.docker.DockerChmodType
+dockerChmodType := DockerChmodType.UserGroupWriteExecute
