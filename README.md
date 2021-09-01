@@ -51,6 +51,10 @@ Docker Push
 2. Microsoft VSCode Docker
 3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
 
+Kubernetes
+----------
+1. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
+
 Links
 -----
 1. https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
