@@ -31,13 +31,14 @@ Docker
 8. docker stop akka-http-docker:0.1
 >Run optional script:
 1. target/universal/stage/bin/akka-http-docker
-2. curl --request GET http://localhost:7979
+2. curl -v http://localhost:7979
 
 Docker Notes
 ------------
 1. list images - docker images
 2. remove image - docker image rm <image-id> --force
-3. list running images - docker ps
+3. list running containers - docker ps
+4. logs - docker logs <container-id>
 
 Reference
 ---------
