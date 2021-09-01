@@ -18,14 +18,13 @@ object Server {
     implicit val system = ActorSystem.create(conf.getString("server.name"), conf)
     implicit val executor = system.dispatcher
     
-    val now = get { complete( OK -> LocalTime.now.toString ) }
-    val routes = now
+    val route = get { complete( OK -> LocalTime.now.toString ) }
 
     val host = conf.getString("server.host")
     val port = conf.getInt("server.port")
     val server = Http()
       .newServerAt(host, port)
-      .bindFlow(routes)
+      .bindFlow(route)
 
     println(s"*** Server started at http://$host:$port/\nPress RETURN to stop...")
 
