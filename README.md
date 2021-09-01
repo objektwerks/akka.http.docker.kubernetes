@@ -1,11 +1,13 @@
 Akka Http Docker Kubernetes
 ---------------------------
->Akka Http server in docker image and container with kubernetes.
+>Akka Http server in docker image and container deployed with kubernetes.
 
 Install
 -------
 1. Docker - https://docs.docker.com/get-docker/
 2. Microsoft VSCode Docker ( a more functional alternative to Docker Dashboard! )
+3. Kubectl - https://kubernetes.io/docs/tasks/tools/
+4. Minicube - https://kubernetes.io/docs/tasks/tools/
 
 Build
 -----
