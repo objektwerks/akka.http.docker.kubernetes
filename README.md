@@ -2,6 +2,10 @@ Akka Http Docker
 ----------------
 >Akka Http server housed in docker instance.
 
+Install
+-------
+1. Docker - https://docs.docker.com/get-docker/
+
 Build
 -----
 1. sbt clean compile
