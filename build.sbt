@@ -1,3 +1,5 @@
+enablePlugins(JavaAppPackaging)
+
 name := "akka.http.docker"
 organization := "objektwerks"
 version := "0.1-SNAPSHOT"
