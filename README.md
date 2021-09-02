@@ -63,5 +63,6 @@ Resources
 1. https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
 2. https://faun.pub/docker-wonderland-akka-http-server-and-postgres-db-962b971ff28a
 >Kubernetes
-1. Kubectl - https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/
-2. sbt-kubeyml - https://github.com/vaslabs/sbt-kubeyml
+1. Kubectl - https://kubernetes.io/docs/tutorials/kubernetes-basics/
+2. Minikube - https://minikube.sigs.k8s.io/docs/
+3. sbt-kubeyml - https://github.com/vaslabs/sbt-kubeyml
