@@ -34,21 +34,16 @@ Docker
 8. curl http://localhost:7979 ( via localhost )
 9. docker stop container-id
 
-Docker Script
--------------
-1. target/universal/stage/bin/akka-http-docker
-2. curl http://localhost:7979
-
-Docker Notes
-------------
+Docker Commands
+---------------
 1. list images - docker images
 2. remove image - docker image rm image-id --force
-3. list running containers - docker ps
+3. list containers - docker ps
 4. logs - docker logs container-id
 
 Docker Push
 -----------
->To push akka-http-docker:0.1 to your DockerHub use one of these options:
+>To push akka-http-docker-kubernetes:0.1 to your DockerHub use one of these options:
 1. Docker Dashboard
 2. Microsoft VSCode Docker
 3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
