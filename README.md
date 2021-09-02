@@ -59,7 +59,9 @@ Kubernetes
 2. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
 3. kubectl create -f ./target/kubeyml/deployment.yml  ( note: deployment.apps/akka-http-server created )
 4. minikube dashboard  ( CTRL-C to stop )
-5. minikube stop | minikube status
+5. minikube ip  ( insert ip in curl url in next step )
+6. curl http://192.168.49.2:7979
+7. minikube stop | minikube status
 
 Resources
 ---------
