@@ -27,7 +27,7 @@ Docker
 2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
 3. sbt docker:publishLocal
 4. docker images
-5. docker run --rm -it -d -p 7979:7979/tcp akka-http-docker:0.1
+5. docker run --rm -it -d -p 7979:7979/tcp akka-http-docker-kubernetes:0.1
 6. docker ps
 7. docker exec -it container-id /bin/bash
    * curl http://localhost:7979  (via docker container )
@@ -55,7 +55,10 @@ Docker Push
 
 Kubernetes
 ----------
-1. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
+1. minikube start
+   * minikube dashboard  ( optional )
+2. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
+3. kubectl create -f ./target/kubeyml/deployment.yml  ( note: deployment.apps/akka-http-server created )
 
 Resources
 ---------
