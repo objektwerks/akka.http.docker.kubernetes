@@ -55,10 +55,11 @@ Docker Push
 
 Kubernetes
 ----------
-1. minikube start
-   * minikube dashboard  ( optional )
+1. minikube start | minikube status
 2. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
 3. kubectl create -f ./target/kubeyml/deployment.yml  ( note: deployment.apps/akka-http-server created )
+4. minikube dashboard  ( CTRL-C to stop )
+5. minikube stop | minikube status
 
 Resources
 ---------
@@ -68,5 +69,5 @@ Resources
 >Kubernetes
 1. Kubectl - https://kubernetes.io/docs/tutorials/kubernetes-basics/
 2. Minikube - https://minikube.sigs.k8s.io/docs/
-3. sbt-kubeyml - https://github.com/vaslabs/sbt-kubeyml
+3. sbt-kubeyml - https://sbt-kubeyml.vaslabs.org
 4. Tutorial - https://yzhong-cs.medium.com/getting-started-with-kubernetes-and-docker-with-minikube-b413d4deeb92
