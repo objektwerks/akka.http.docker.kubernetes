@@ -42,6 +42,7 @@ import kubeyml.deployment.plugin.Keys._
 kube / namespace := "default"
 kube / application := dockerImageName
 kube / dockerImage := s"$dockerHubName/$dockerImageName:$dockerAppVersion"
+kube / ports := List(Port(dockerImageName, 7979))
 kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
