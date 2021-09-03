@@ -43,12 +43,12 @@ import scala.concurrent.duration._
 kube / namespace := "default"
 kube / application := dockerImageName
 kube / dockerImage := s"$dockerHubName/$dockerImageName:$dockerAppVersion"
-kube / ports := List(Port(dockerImageName, 7979))
+kube / ports := List(Port(dockerImageName, 7979), Port("healthz", 8080))
 kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
 kube / livenessProbe := HttpProbe(
-  HttpGet(path = "/health", port = 8080, httpHeaders = List.empty),
+  HttpGet(path = "/healthz", port = 8080, httpHeaders = List.empty),
   initialDelay = 3 seconds, timeout = 3 seconds, period = 30 seconds,
   failureThreshold = 3, successThreshold = 1
 )
