@@ -23,7 +23,7 @@ Run
 
 Curl
 ----
-1. curl http://localhost:7979
+1. curl http://localhost:7979/now
 
 Docker
 ------
