@@ -34,10 +34,10 @@ import kubeyml.deployment._
 import kubeyml.deployment.api._
 import kubeyml.deployment.plugin.Keys._
 
-namespace in kube := "default"
-application in kube := "akka-http-server"
-envs in kube := Map(
+kube / namespace := "default"
+kube / application := "akka-http-server"
+kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
-resourceLimits in kube := Resource(Cpu.fromCores(2), Memory(1024))
-resourceRequests in kube := Resource(Cpu(500), Memory(512))
+kube / resourceLimits := Resource(Cpu.fromCores(2), Memory(1024))
+kube / resourceRequests := Resource(Cpu(500), Memory(512))
