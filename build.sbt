@@ -49,7 +49,7 @@ kube / envs := Map(
 )
 kube / livenessProbe := HttpProbe(
   HttpGet(path = "/health", port = 8080, httpHeaders = List.empty),
-  initialDelay = 0 seconds, timeout = 3 seconds, period = 10 seconds,
+  initialDelay = 3 seconds, timeout = 3 seconds, period = 30 seconds,
   failureThreshold = 3, successThreshold = 1
 )
 kube / resourceLimits := Resource(Cpu.fromCores(2), Memory(1024))
