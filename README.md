@@ -30,8 +30,8 @@ Docker
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-server:0.1
 6. docker ps
 7. docker exec -it container-id /bin/bash
-   * curl http://localhost:7979  (via docker container )
-8. curl http://localhost:7979 ( via localhost )
+   * curl http://localhost:7979/now  (via docker container )
+8. curl http://localhost:7979/now ( via localhost )
 9. docker stop container-id
 
 Docker Commands
@@ -61,7 +61,7 @@ Kubernetes
 9. Verify deployment of akka-http-server via Minikube Dashboard.
    * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server is not deployed )
 10. minikube ip  ( insert ip in curl url in next step )
-11. curl http://$minikubeip:7979
+11. curl http://$minikubeip:7979/now
 12. minikube stop | minikube status
 
 Resources
