@@ -61,7 +61,7 @@ Kubernetes
 9. Verify deployment of akka-http-server via Minikube Dashboard.
    * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server is not deployed )
 10. minikube ip  ( insert ip in curl url in next step )
-11. curl http://192.168.49.2:7979
+11. curl http://$minikubeip:7979
 12. minikube stop | minikube status
 
 Resources
