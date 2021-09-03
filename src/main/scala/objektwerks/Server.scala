@@ -3,38 +3,24 @@ package objektwerks
 import akka.actor.ActorSystem
 
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model.StatusCodes.OK
-import akka.http.scaladsl.server.Directives._
 
 import com.typesafe.config.ConfigFactory
-
-import java.time.LocalDateTime
 
 import scala.io.StdIn
 
 object Server {
   def main(args: Array[String]): Unit = {
     val conf = ConfigFactory.load("server.conf")
-    implicit val system = ActorSystem.create(conf.getString("server.name"), conf)
-    implicit val executor = system.dispatcher
-
-    val health = path("health") {
-      get {
-        complete(OK -> "ok")
-      }
-    }
-    val now = path("now") {
-      get {
-        complete(OK -> LocalDateTime.now.toString)
-      }
-    }
-    val routes = health ~ now
-
+    val name = conf.getString("server.name")
     val host = conf.getString("server.host")
     val port = conf.getInt("server.port")
+
+    implicit val system = ActorSystem.create(name, conf)
+    implicit val executor = system.dispatcher
+
     val server = Http()
       .newServerAt(host, port)
-      .bindFlow(routes)
+      .bindFlow(Router.routes)
 
     println(s"*** Server started at http://$host:$port/\nPress RETURN to stop...")
 
