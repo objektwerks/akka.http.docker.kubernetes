@@ -43,7 +43,7 @@ Docker Commands
 
 Docker Push
 -----------
->To push akka-http-docker-kubernetes:0.1 to your DockerHub use one of these options:
+>To push akka-http-server:0.1 to your DockerHub use one of these options:
 1. Docker Dashboard
 2. Microsoft VSCode Docker
 3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
@@ -51,17 +51,18 @@ Docker Push
 Kubernetes
 ----------
 1. sbt clean compile stage
-2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
-3. sbt docker:publishLocal
-4. see Docker Push section above to publish to Docker Hub
-5. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
-6. minikube start | minikube status
-7. minikube dashboard  ( CTRL-C to stop )
-8. Verify deployment of akka-http-server via Minikube Dashboard.
+2. sbt docker:clean  ( optional, throws exception if no local image in repository )
+3. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
+4. sbt docker:publishLocal
+5. see Docker Push section above to publish to Docker Hub
+6. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
+7. minikube start | minikube status
+8. minikube dashboard  ( CTRL-C to stop )
+9. Verify deployment of akka-http-server via Minikube Dashboard.
    * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server is not deployed )
-9. minikube ip  ( insert ip in curl url in next step )
-10. curl http://192.168.49.2:7979
-11. minikube stop | minikube status
+10. minikube ip  ( insert ip in curl url in next step )
+11. curl http://192.168.49.2:7979
+12. minikube stop | minikube status
 
 Resources
 ---------
