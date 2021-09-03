@@ -17,6 +17,7 @@ libraryDependencies ++= {
   )
 }
 
+Docker / packageName := "akka-http-server"
 dockerExposedPorts ++= Seq(7979)
 dockerBaseImage := "openjdk:8-jre-alpine"
 
@@ -36,6 +37,7 @@ import kubeyml.deployment.plugin.Keys._
 
 kube / namespace := "default"
 kube / application := "akka-http-server"
+kube / dockerImage := "akka-http-server"
 kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
