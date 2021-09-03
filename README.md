@@ -27,7 +27,7 @@ Docker
 2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
 3. sbt docker:publishLocal
 4. docker images
-5. docker run --rm -it -d -p 7979:7979/tcp akka-http-docker-kubernetes:0.1
+5. docker run --rm -it -d -p 7979:7979/tcp akka-http-server:0.1
 6. docker ps
 7. docker exec -it container-id /bin/bash
    * curl http://localhost:7979  (via docker container )
@@ -50,13 +50,17 @@ Docker Push
 
 Kubernetes
 ----------
-1. minikube start | minikube status
-2. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
-3. kubectl create -f ./target/kubeyml/deployment.yml  ( note: deployment.apps/akka-http-server created )
-4. minikube dashboard  ( CTRL-C to stop )
-5. minikube ip  ( insert ip in curl url in next step )
-6. curl http://192.168.49.2:7979
-7. minikube stop | minikube status
+1. sbt clean compile stage
+2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
+3. sbt docker:publishLocal
+4. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
+5. minikube start | minikube status
+6. minikube dashboard  ( CTRL-C to stop )
+7. Verify deployment of akka-http-server.
+   * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server not deployed )
+8. minikube ip  ( insert ip in curl url in next step )
+9. curl http://192.168.49.2:7979
+10. minikube stop | minikube status
 
 Resources
 ---------
