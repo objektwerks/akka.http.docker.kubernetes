@@ -74,3 +74,4 @@ Resources
 2. Minikube - https://minikube.sigs.k8s.io/docs/
 3. sbt-kubeyml - https://sbt-kubeyml.vaslabs.org
 4. Tutorial - https://yzhong-cs.medium.com/getting-started-with-kubernetes-and-docker-with-minikube-b413d4deeb92
+5. Probes - https://itnext.io/kubernetes-readiness-probes-examples-common-pitfalls-136e3a9a058d
