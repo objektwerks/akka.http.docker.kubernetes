@@ -20,7 +20,7 @@ object Server {
     
     val route = get { complete( OK -> LocalDateTime.now.toString ) }
 
-    val host = conf.getString("server.host") // Must be configured to 0.0.0.0 for docker.
+    val host = conf.getString("server.host")
     val port = conf.getInt("server.port")
     val server = Http()
       .newServerAt(host, port)
