@@ -26,6 +26,7 @@ dockerExposedPorts ++= Seq(7979)
 dockerBaseImage := "openjdk:8-jre-alpine"
 
 import com.typesafe.sbt.packager.docker._
+
 dockerCommands ++= Seq(
   Cmd("USER", "root"),
   ExecCmd("RUN", "apk", "add", "--no-cache", "bash"),
@@ -39,6 +40,7 @@ import kubeyml.deployment._
 import kubeyml.deployment.api._
 import kubeyml.deployment.plugin.Keys._
 import scala.concurrent.duration._
+import scala.language.postfixOps
 
 kube / namespace := "default"
 kube / application := dockerImageName
@@ -48,7 +50,7 @@ kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
 kube / livenessProbe := HttpProbe(
-  HttpGet(path = "/", port = 7979, httpHeaders = List.empty),
+  HttpGet(path = "/health", port = 7979, httpHeaders = List.empty),
   initialDelay = 3 seconds, timeout = 3 seconds, period = 30 seconds,
   failureThreshold = 3, successThreshold = 1
 )
