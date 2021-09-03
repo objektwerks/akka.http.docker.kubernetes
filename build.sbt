@@ -1,8 +1,12 @@
 enablePlugins(JavaAppPackaging, DockerPlugin, KubeDeploymentPlugin)
 
+val dockerImageName = "akka-http-server"
+val dockerHubName = "objektwerks"
+val dockerAppVersion = "0.1"
+
 name := "akka.http.docker.kubernetes"
 organization := "objektwerks"
-version := "0.1"
+version := dockerAppVersion
 scalaVersion := "2.13.6"
 libraryDependencies ++= {
   val akkaVersion = "2.6.16"
@@ -17,7 +21,7 @@ libraryDependencies ++= {
   )
 }
 
-Docker / packageName := "akka-http-server"
+Docker / packageName := dockerImageName
 dockerExposedPorts ++= Seq(7979)
 dockerBaseImage := "openjdk:8-jre-alpine"
 
@@ -36,8 +40,8 @@ import kubeyml.deployment.api._
 import kubeyml.deployment.plugin.Keys._
 
 kube / namespace := "default"
-kube / application := "akka-http-server"
-kube / dockerImage := "akka-http-server"
+kube / application := dockerImageName
+kube / dockerImage := s"$dockerHubName/$dockerImageName:$dockerAppVersion"
 kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
