@@ -9,10 +9,6 @@ Install
 3. Kubectl - https://kubernetes.io/docs/tasks/tools/
 4. Minicube - https://kubernetes.io/docs/tasks/tools/
 
-Build
------
-1. sbt clean compile
-
 Test
 ----
 2. sbt clean test
@@ -20,10 +16,7 @@ Test
 Run
 ---
 1. sbt run
-
-Curl
-----
-1. curl http://localhost:7979/now
+2. curl http://localhost:7979/now
 
 Docker
 ------
@@ -34,7 +27,7 @@ Docker
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-server:0.1
 6. docker ps
 7. docker exec -it container-id /bin/bash
-   * curl http://localhost:7979/now  (via docker container )
+   * curl http://localhost:7979/now  ( via docker container )
 8. curl http://localhost:7979/now ( via localhost )
 9. docker stop container-id
 
@@ -47,7 +40,7 @@ Docker Commands
 
 Docker Push
 -----------
->To push akka-http-server:0.1 to your DockerHub use one of these options:
+>To push an image to your DockerHub, consider one of these options:
 1. Docker Dashboard
 2. Microsoft VSCode Docker
 3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
@@ -55,15 +48,15 @@ Docker Push
 Kubernetes
 ----------
 1. sbt clean compile stage
-2. sbt docker:clean  ( optional, throws exception if no local image in repository )
+2. sbt docker:clean  ( optional step that may throw an exception if the local image repo is empty )
 3. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
 4. sbt docker:publishLocal
-5. see Docker Push section above to publish to Docker Hub
+5. see above Docker Push section  ( the deployment.yml, below, points to your docker hub )
 6. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
 7. minikube start | minikube status
-8. minikube dashboard  ( CTRL-C to stop )
+8. minikube dashboard
 9. Verify deployment of akka-http-server via Minikube Dashboard.
-   * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server is not deployed )
+   * kubectl create -f ./target/kubeyml/deployment.yml ( invoke if akka-http-server is not deployed )
 10. minikube ip  ( insert minikube ip in curl url in next step )
 11. curl http://$minikube-ip:7979/now
 12. minikube stop | minikube status
