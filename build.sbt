@@ -38,6 +38,7 @@ dockerChmodType := DockerChmodType.UserGroupWriteExecute
 import kubeyml.deployment._
 import kubeyml.deployment.api._
 import kubeyml.deployment.plugin.Keys._
+import scala.concurrent.duration._
 
 kube / namespace := "default"
 kube / application := dockerImageName
@@ -45,6 +46,11 @@ kube / dockerImage := s"$dockerHubName/$dockerImageName:$dockerAppVersion"
 kube / ports := List(Port(dockerImageName, 7979))
 kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
+)
+kube / livenessProbe := HttpProbe(
+  HttpGet(path = "/health", port = 8080, httpHeaders = List.empty),
+  initialDelay = 0 seconds, timeout = 3 seconds, period = 10 seconds,
+  failureThreshold = 3, successThreshold = 1
 )
 kube / resourceLimits := Resource(Cpu.fromCores(2), Memory(1024))
 kube / resourceRequests := Resource(Cpu(500), Memory(512))
