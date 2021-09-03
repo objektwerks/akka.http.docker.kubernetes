@@ -13,6 +13,10 @@ Build
 -----
 1. sbt clean compile
 
+Test
+----
+2. sbt clean test
+
 Run
 ---
 1. sbt run
