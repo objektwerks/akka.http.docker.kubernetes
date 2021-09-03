@@ -59,7 +59,7 @@ Kubernetes
    * kubectl create -f ./target/kubeyml/deployment.yml ( invoke if akka-http-server is not deployed )
 10. minikube ip  ( insert minikube ip in curl url in next step )
 11. curl http://$minikube-ip:7979/now
-12. minikube stop | minikube status
+12. minikube stop | minikube statu
 
 Resources
 ---------
