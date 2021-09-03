@@ -57,8 +57,8 @@ Kubernetes
 5. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
 6. minikube start | minikube status
 7. minikube dashboard  ( CTRL-C to stop )
-8. Verify deployment of akka-http-server.
-   * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server not deployed )
+8. Verify deployment of akka-http-server via Minikube Dashboard.
+   * kubectl create -f ./target/kubeyml/deployment.yml ( if akka-http-server is not deployed )
 9. minikube ip  ( insert ip in curl url in next step )
 10. curl http://192.168.49.2:7979
 11. minikube stop | minikube status
