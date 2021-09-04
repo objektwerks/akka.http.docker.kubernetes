@@ -16,21 +16,22 @@ Test
 Run
 ---
 1. sbt run
-2. curl http://localhost:7979/now
+2. curl http://localhost:7979/health
+3. curl http://localhost:7979/now
 
 Docker
 ------
 1. sbt clean compile stage
 2. sbt docker:stage  ( see target/docker/stage/Dockerfile )
 3. sbt docker:publishLocal
-4. docker images  ( note akka-http-server:0.1 image listed )
+4. docker images  ( note akka-http-server:0.1 listed )
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-server:0.1
-6. docker ps  ( note akka-http-server:0.1 image listed )
+6. docker ps  ( note akka-http-server:0.1 listed )
 7. docker exec -it container-id /bin/bash
    * curl http://localhost:7979/now  ( via docker container )
 8. curl http://localhost:7979/now ( via localhost )
 9. docker stop container-id  ( obtain container-id via docker ps listing )
-10. docker ps  ( note akka-http-server:0.1 image not listed )
+10. docker ps  ( note akka-http-server:0.1 not listed )
 
 Docker Commands
 ---------------
@@ -41,7 +42,7 @@ Docker Commands
 
 Docker Push
 -----------
->To push an image to your DockerHub, consider one of these options:
+>To push an image to DockerHub, consider one of these options:
 1. Docker Dashboard
 2. Microsoft VSCode Docker
 3. sbt -Ddocker.username=user-name -Ddocker.registry=registry-url docker:publish
@@ -49,15 +50,15 @@ Docker Push
 Kubernetes
 ----------
 1. sbt clean compile stage
-2. sbt docker:clean  ( optional step that may throw an exception if the local image repo is empty )
-3. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
+2. sbt docker:clean  ( optional step that will throw an exception if the local image repo is empty )
+3. sbt docker:stage  ( see target/docker/stage/Dockerfile )
 4. sbt docker:publishLocal
 5. see above Docker Push section  ( the deployment.yml, below, points to your docker hub )
-6. sbt kubeyml:gen ( see target/kubeyml/deployment.yml )
+6. sbt kubeyml:gen  ( see target/kubeyml/deployment.yml )
 7. minikube start | minikube status
 8. minikube dashboard
-9. Verify deployment of akka-http-server via Minikube Dashboard.
-   * kubectl create -f ./target/kubeyml/deployment.yml ( invoke if akka-http-server is not deployed )
+9. verify deployment of akka-http-server via minikube dashboard
+   * kubectl create -f ./target/kubeyml/deployment.yml  ( invoke if akka-http-server is not deployed )
 10. minikube ip  ( insert minikube ip in curl url in next step )
 11. curl http://$minikube-ip:7979/now
 12. minikube stop | minikube status
