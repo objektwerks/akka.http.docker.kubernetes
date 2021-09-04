@@ -21,7 +21,7 @@ Run
 Docker
 ------
 1. sbt clean compile stage
-2. sbt docker:stage  ( see Dockerfile in target/docker/stage/ )
+2. sbt docker:stage  ( see target/docker/stage/Dockerfile )
 3. sbt docker:publishLocal
 4. docker images  ( note akka-http-server:0.1 image listed )
 5. docker run --rm -it -d -p 7979:7979/tcp akka-http-server:0.1
