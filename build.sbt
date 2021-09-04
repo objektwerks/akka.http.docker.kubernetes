@@ -24,19 +24,17 @@ libraryDependencies ++= {
   )
 }
 
+import com.typesafe.sbt.packager.docker._
+import com.typesafe.sbt.packager.docker.DockerChmodType
+
 Docker / packageName := dockerImageName
 dockerExposedPorts ++= Seq(7979)
 dockerBaseImage := "openjdk:8-jre-alpine"
-
-import com.typesafe.sbt.packager.docker._
-
 dockerCommands ++= Seq(
   Cmd("USER", "root"),
   ExecCmd("RUN", "apk", "add", "--no-cache", "bash"),
   ExecCmd("RUN", "apk", "add", "--no-cache", "curl")
 )
-
-import com.typesafe.sbt.packager.docker.DockerChmodType
 dockerChmodType := DockerChmodType.UserGroupWriteExecute
 
 import kubeyml.deployment._
