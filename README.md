@@ -2,6 +2,15 @@ Akka Http Docker Kubernetes
 ---------------------------
 >Akka Http server built as Docker image, deployable to Docker ***and*** Kubernetes via Minikube.
 
+Warning
+-------
+>Kubernetes has failed many. Consequently, the anti-Kubernetes movement is growing.
+>Here are just a few articles detailing the issues with Kubernetes:
+1. https://b.amy.gg/kubernetes-sucks
+2. https://blog.tilt.dev/2019/08/21/why-does-developing-on-kubernetes-suck.html
+3. https://news.ycombinator.com/item?id=26271470
+>With enough money and time, though, many do succeed with Kubernetes.:)
+
 Install
 -------
 1. Docker - https://docs.docker.com/get-docker/
