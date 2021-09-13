@@ -59,6 +59,7 @@ Kubernetes
 8. minikube dashboard
 9. verify deployment of akka-http-server via minikube dashboard
    * kubectl create -f ./target/kubeyml/deployment.yml  ( invoke if akka-http-server is not deployed )
+   * ***WARNING*** Can't get past this point. The above step works, but deployment ultimately fails!
 10. minikube ip  ( insert minikube ip in curl url in next step )
 11. curl http://$minikube-ip:7979/now
 12. minikube stop | minikube status
