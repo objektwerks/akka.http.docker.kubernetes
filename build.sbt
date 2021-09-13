@@ -1,5 +1,6 @@
 enablePlugins(JavaAppPackaging, DockerPlugin, KubeDeploymentPlugin)
 
+val dockerAppName = "now"
 val dockerImageName = "akka-http-server"
 val dockerHubName = "objektwerks"
 val dockerAppVersion = "0.1"
@@ -44,9 +45,9 @@ import scala.concurrent.duration._
 import scala.language.postfixOps
 
 kube / namespace := "default"
-kube / application := dockerImageName
+kube / application := dockerAppName
 kube / dockerImage := s"$dockerHubName/$dockerImageName:$dockerAppVersion"
-kube / ports := List(Port(dockerImageName, 7979))
+kube / ports := List(Port(dockerAppName, 7979))
 kube / envs := Map(
   EnvName("JAVA_OPTS") -> EnvRawValue("-Xms256M -Xmx1024M"),
 )
