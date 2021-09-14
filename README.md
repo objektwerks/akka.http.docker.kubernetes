@@ -4,12 +4,12 @@ Akka Http Docker Kubernetes
 
 Warning
 -------
->Kubernetes has failed many. Consequently, the anti-Kubernetes movement is growing.
->Here are just a few articles detailing the issues with Kubernetes:
+>Kubernetes is complex and has failed many. Consequently, the anti-Kubernetes movement is growing.
+>Here are just a few articles detailing some of the issues with Kubernetes:
 1. https://b.amy.gg/kubernetes-sucks
 2. https://blog.tilt.dev/2019/08/21/why-does-developing-on-kubernetes-suck.html
 3. https://news.ycombinator.com/item?id=26271470
->With enough money and time, though, many do succeed with Kubernetes.:)
+>With enough money and time, though, some do succeed with Kubernetes.:)
 
 Install
 -------
