@@ -11,7 +11,7 @@ version := dockerAppVersion
 scalaVersion := "2.13.7"
 libraryDependencies ++= {
   val akkaVersion = "2.6.17"
-  val akkaHttpVersion = "10.2.6"
+  val akkaHttpVersion = "10.2.7"
   Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
     "com.typesafe.akka" %% "akka-slf4j" % akkaVersion,
