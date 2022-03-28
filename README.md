@@ -1,6 +1,6 @@
 Akka Http Docker Kubernetes
 ---------------------------
->Akka Http server built as Docker image, deployable to Docker ***and*** Kubernetes via Minikube.
+>Akka-Http server built as Docker image, deployable to Docker ***and*** Kubernetes via Minikube.
 
 Warning
 -------
