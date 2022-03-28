@@ -10,7 +10,7 @@ organization := "objektwerks"
 version := dockerAppVersion
 scalaVersion := "2.13.8"
 libraryDependencies ++= {
-  val akkaVersion = "2.6.18"
+  val akkaVersion = "2.6.19"
   val akkaHttpVersion = "10.2.9"
   Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
