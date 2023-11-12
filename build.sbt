@@ -30,7 +30,7 @@ import com.typesafe.sbt.packager.docker.DockerChmodType
 
 Docker / packageName := dockerImageName
 dockerExposedPorts ++= Seq(7979)
-dockerBaseImage := "openjdk:8-jre-alpine"
+dockerBaseImage := "openjdk:21-jdk"
 dockerCommands ++= Seq(
   Cmd("USER", "root"),
   ExecCmd("RUN", "apk", "add", "--no-cache", "bash"),
