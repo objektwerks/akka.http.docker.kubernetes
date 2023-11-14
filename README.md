@@ -76,13 +76,13 @@ Kubernetes
 Resources
 ---------
 >Docker
-1. https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
-2. https://faun.pub/docker-wonderland-akka-http-server-and-postgres-db-962b971ff28a
+* https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
+* https://faun.pub/docker-wonderland-akka-http-server-and-postgres-db-962b971ff28a
 >Kubernetes
-1. Kubectl - https://kubernetes.io/docs/tutorials/kubernetes-basics/
-2. Minikube - https://minikube.sigs.k8s.io/docs/
-3. sbt-kubeyml - https://sbt-kubeyml.vaslabs.org
-4. Tutorial - https://yzhong-cs.medium.com/getting-started-with-kubernetes-and-docker-with-minikube-b413d4deeb92
-5. Probes - https://itnext.io/kubernetes-readiness-probes-examples-common-pitfalls-136e3a9a058d
+* Kubectl - https://kubernetes.io/docs/tutorials/kubernetes-basics/
+* Minikube - https://minikube.sigs.k8s.io/docs/
+* sbt-kubeyml - https://sbt-kubeyml.vaslabs.org
+* Tutorial - https://yzhong-cs.medium.com/getting-started-with-kubernetes-and-docker-with-minikube-b413d4deeb92
+* Probes - https://itnext.io/kubernetes-readiness-probes-examples-common-pitfalls-136e3a9a058d
 >AWS
-1. https://faun.pub/deploying-docker-images-to-ecs-b43058dc0456
+* https://faun.pub/deploying-docker-images-to-ecs-b43058dc0456
