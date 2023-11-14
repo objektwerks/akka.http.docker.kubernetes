@@ -9,7 +9,6 @@ Warning
 * [Kubernetes Sucks](https://b.amy.gg/kubernetes-sucks)
 * [Why does Kubernetes Suck](https://blog.tilt.dev/2019/08/21/why-does-developing-on-kubernetes-suck.html)
 * [YCombinator Forum](https://news.ycombinator.com/item?id=26271470)
->With enough money and time, though, some do succeed with Kubernetes.:)
 
 Install
 -------
