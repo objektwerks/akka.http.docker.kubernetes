@@ -1,9 +1,9 @@
 enablePlugins(JavaAppPackaging, DockerPlugin, KubeDeploymentPlugin)
 
-val dockerAppName = "now"
-val dockerImageName = "akka-http-server"
-val dockerHubName = "objektwerks"
-val dockerAppVersion = "0.1"
+lazy val dockerAppName = "now"
+lazy val dockerImageName = "akka-http-server"
+lazy val dockerHubName = "objektwerks"
+lazy val dockerAppVersion = "0.1"
 
 name := "akka.http.docker.kubernetes"
 organization := "objektwerks"
