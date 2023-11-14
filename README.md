@@ -13,10 +13,10 @@ Warning
 
 Install
 -------
-1. Docker - https://docs.docker.com/get-docker/
+1. [Docker](https://docs.docker.com/get-docker/)
 2. Microsoft VSCode Docker ( a more functional alternative to Docker Dashboard! )
-3. Kubectl - https://kubernetes.io/docs/tasks/tools/
-4. Minicube - https://kubernetes.io/docs/tasks/tools/
+3. [Kubectl](https://kubernetes.io/docs/tasks/tools/)
+4. [Minicube](https://kubernetes.io/docs/tasks/tools/)
 
 Test
 ----
