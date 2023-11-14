@@ -75,14 +75,14 @@ Kubernetes
 
 Resources
 ---------
->Docker
-* https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/
-* https://faun.pub/docker-wonderland-akka-http-server-and-postgres-db-962b971ff28a
->Kubernetes
+>**Docker**
+* [Dockerize Akka Http Server](https://www.freecodecamp.org/news/how-to-dockerise-a-scala-and-akka-http-application-the-easy-way-23310fc880fa/)
+* [Dockker Akka Http and Postgres](https://faun.pub/docker-wonderland-akka-http-server-and-postgres-db-962b971ff28a)
+>**Kubernetes**
 * [Kubectl](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 * [Minikube](https://minikube.sigs.k8s.io/docs/)
 * [sbt-kubeyml](https://sbt-kubeyml.vaslabs.org)
 * [Docker-Kuberneted Tutorial](https://yzhong-cs.medium.com/getting-started-with-kubernetes-and-docker-with-minikube-b413d4deeb92)
 * [Probes](https://itnext.io/kubernetes-readiness-probes-examples-common-pitfalls-136e3a9a058d)
->AWS
+>**AWS**
 * [AWS Docker Deploy](https://faun.pub/deploying-docker-images-to-ecs-b43058dc0456)
