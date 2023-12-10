@@ -17,7 +17,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-slf4j" % akkaVersion,
     "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
     "com.typesafe.akka" %% "akka-stream" % akkaVersion,
-    "com.typesafe" % "config" % "1.4.2",
+    "com.typesafe" % "config" % "1.4.3",
     "ch.qos.logback" % "logback-classic" % "1.4.14",
     "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test,
     "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpVersion % Test,
